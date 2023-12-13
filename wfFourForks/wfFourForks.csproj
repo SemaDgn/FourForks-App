@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78EA31A9-A2FC-4D10-AFBE-10C48D6725CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wfFourForks</RootNamespace>
+    <AssemblyName>wfFourForks</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cGenel.cs" />
+    <Compile Include="cKullanici.cs" />
+    <Compile Include="cMasalar.cs" />
+    <Compile Include="cPersonel.cs" />
+    <Compile Include="cUrunler.cs" />
+    <Compile Include="FourForksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FourForksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMasalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMasalar.Designer.cs">
+      <DependentUpon>frmMasalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuler.Designer.cs">
+      <DependentUpon>frmMenuler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor.Designer.cs">
+      <DependentUpon>frmRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiparis.Designer.cs">
+      <DependentUpon>frmSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYonetim.Designer.cs">
+      <DependentUpon>frmYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMasalar.resx">
+      <DependentUpon>frmMasalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuler.resx">
+      <DependentUpon>frmMenuler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor.resx">
+      <DependentUpon>frmRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiparis.resx">
+      <DependentUpon>frmSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYonetim.resx">
+      <DependentUpon>frmYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <None Include="FourForksDataSet.xsc">
+      <DependentUpon>FourForksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FourForksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FourForksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FourForksDataSet.xss">
+      <DependentUpon>FourForksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musteri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yonetim-admin-kontrol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custom-reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup-vault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblem-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crystal_Project_Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusAnnotations_Critical_32xLG_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-user-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
